@@ -1,0 +1,47 @@
+*	THREE TABLES -title
+		     -subtitle
+	             -head
+*	title has 3 columns 
+		id-auto incremented, title name, access
+
+*	subtitle has 4 columns  id-auto incremented, subtitle name, title is in foreign key with table title, access
+
+*	head has 6 columns  id-auto incremented, title is in foreign key with table title, subtitle is in foreign key with table subtitle, value, titlecolor, valuecolor
+		
+
+
+
+INSERTION : 
+
+
+	// INSERTING THE TITLE NAME, AND ACCESS 
+	insert into title(title,access) values('TITLE 1',1);
+
+	// INSERTING THE subtitle name ,title ,access
+	insert into subtitle(subtitle,title,access) values('SUB 1' , 1 , 1);
+
+	//CHECKING FOR AUTO GENERATED ID
+	select * from subtitle where title= ;
+
+	//INSERTING VALUES, TITLE COLOR, VALUE COLOR
+	insert into head(title,subtitle,value,titlecolor,valuecolor) values ( 4, 30 , 4, '#FFFFFF' , '#B1CC74' );
+
+
+DELETION :
+
+	//making the access 0 makes the subtitle not to display
+	update subtitle set access=0 where id=1;
+
+UPDATE : 
+
+	//CHANGING THE SUBTITLE NAME
+	update subtitle set subtitle='SUB 9' where id= ;
+
+	//CHANGING THE VALUE 
+	update head set value=898 where subtitle= ;
+
+	//CHANGING THE COLOR OF VALUE
+	update head set valuecolor='#DFE0E2' where subtitle= ;
+
+java version 	: 20.0.1
+mysql version 	: 8.0
